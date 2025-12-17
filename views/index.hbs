@@ -1,7 +1,8 @@
-<h1>Express</h1>
+<h1>Current Favorite Songs</h1>
 <ul>
-{{#each list}}
-<li>{{this}}</li>
-{{/each}}
+  {{#each songs}}
+    <li>
+      <strong>{{song}}</strong> — {{artist}}
+    </li>
+  {{/each}}
 </ul>
-

@@ -8,10 +8,26 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^17.2.3",
     "express": "~4.16.1",
     "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.0.1",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "Build a “Stored List” webpage using Express.js, Handlebars, and MongoDB Atlas, where your server reads a list of items from a database and displays them on the page.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emilynqa309/stored-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emilynqa309/stored-list/issues"
+  },
+  "homepage": "https://github.com/Emilynqa309/stored-list#readme"
 }
