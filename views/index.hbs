@@ -1,8 +1,18 @@
-<h1>Current Favorite Songs</h1>
-<ul>
-  {{#each songs}}
-    <li>
-      <strong>{{song}}</strong> — {{artist}}
-    </li>
-  {{/each}}
+<header>
+    <h1>2025 Favorite Songs</h1>
+</header>
+
+<div id="form">
+    <input id="text" placeholder="Add a song..." />
+    <button id="add-song-button">Add</button>
+</div>
+
+<div class="toolbar">
+    <button id="sort">Sort A–Z</button>
+    <button id="clear">Clear All</button>
+</div>
+
+<ul id="list">
 </ul>
+
+<script src="/javascript/script.js"></script>
