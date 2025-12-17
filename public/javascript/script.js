@@ -20,7 +20,7 @@ function updateList() {
 
         // Create delete button
         const deleteButton = document.createElement('button');
-        deleteButton.innerHTML = 'x';
+        deleteButton.innerHTML = 'listened';
         deleteButton.addEventListener('click', function (e) {
             e.stopPropagation();
             deleteSong(faveSongs[i]._id);
@@ -41,10 +41,20 @@ function updateList() {
 }
 
 // 4. Handle adding a new item when the form is submitted
-addSongButton.addEventListener('click', async function () {
-    let inputvalue = document.getElementById('text').value;
-    addSong(inputvalue);
+addSongButton.addEventListener('click', function (e) {
+    e.preventDefault(); 
+
+    const input = document.getElementById('text');
+    const value = input.value;
+
+    if (!value.trim()) return;
+
+    addSong(value);
+
+    input.value = '';      
+    input.focus();         
 });
+
 
 // 5. Sort items alphabetically when sortBtn is clicked
 sortBtn.addEventListener("click", () => {

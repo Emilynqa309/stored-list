@@ -1,8 +1,143 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/* Page background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef1f9, #dde2f3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* VISUAL CONTAINER (targets ALL content) */
+body > header,
+body > #form,
+body > .toolbar,
+body > ul {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Stack everything vertically */
+body {
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: white;
+  padding: 28px 24px 20px;
+  border-radius: 22px 22px 0 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Form */
+#form {
+  background: white;
+  padding: 16px 24px;
+
+  display: flex;
+  gap: 8px;
+}
+
+/* Toolbar */
+.toolbar {
+  background: white;
+  padding: 0 24px 16px;
+
+  display: flex;
+  gap: 8px;
+}
+
+/* Inputs */
+input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+/* Buttons */
+button {
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: none;
+  background: #6c63ff;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #574fe0;
+}
+
+/* Song list wrapper */
+ul {
+  list-style: none;
+  padding: 16px 24px 24px;
+  background: white;
+  border-radius: 0 0 22px 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Song item */
+li {
+  width: 100%;
+  background: #f7f8fd;
+  padding: 14px 18px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+/* Listened state */
+li.listened {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+/* Delete button */
+li button {
+  background: #ff5a5a;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  border-radius: 12px;
+}
+
+li button:hover {
+  background: #e04848;
+}
+
